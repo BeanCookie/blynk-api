@@ -1,1 +1,1 @@
-docker run -d -p 80:80 -v $(PWD)/counter.db:/app/counter.db -v $(PWD)/images:/app/images blynk-api
+docker run -d -p 80:80 -v $(PWD)/counter.db:/app/counter.db -v $(PWD)/static:/app/static blynk-api

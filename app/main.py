@@ -3,7 +3,7 @@ from multiprocessing import Value
 
 import os
 
-image_dir = "images"
+image_dir = "static"
 counter_file = "counter.db"
 
 if os.path.exists(counter_file):
