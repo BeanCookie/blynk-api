@@ -26,8 +26,13 @@ def upload():
         count = counter.value
         with open(counter_file, "w") as f:
             f.write("%d\n" % int(count))
+            
         image_path = os.path.join(image_dir, "image_" + str(count) + ".jpg")
         with open(image_path, "wb") as f:
+            f.write(request.data)
+
+        current_path = os.path.join(image_dir, "current.jpg")
+        with open(current_path, "wb") as f:
             f.write(request.data)
     return jsonify({"code": 0})
 
